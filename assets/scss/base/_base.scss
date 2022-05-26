@@ -1,0 +1,40 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: map-get($primary-color, '700' );
+}
+
+%animation-properties {
+    opacity: 0;
+    transform: rotateX(-90deg);
+    transform-origin: top center;
+    -webkit-animation: intro-fade 1.5s 1s cubic-bezier(0.38, 0.97, 0.56, 0.76) forwards;
+    animation: intro-fade 1.5s 1s cubic-bezier(0.38, 0.97, 0.56, 0.76) forwards;
+}
+
+// Intro fade ind
+@-webkit-keyframes intro-fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes intro-fade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}

@@ -1,0 +1,13 @@
+body {
+    color: map-get($primary-color, '900' );
+    font-family: $text-ff;
+    font-size: map-get($sizes, medium );
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: $heading-ff;
+}

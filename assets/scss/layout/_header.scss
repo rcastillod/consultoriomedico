@@ -1,0 +1,9 @@
+.header {
+    border-bottom: 1px solid rgba(map-get($white-color, '900' ), .3);
+    padding-inline: 1.25rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}

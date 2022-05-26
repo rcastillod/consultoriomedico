@@ -1,0 +1,52 @@
+.resumen {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-block-start: 1.875rem;
+    &__item {
+        background-color: rgba(map-get($white-color, '900' ), .4);
+        backdrop-filter: blur(5px);
+        border-radius: .625rem;
+        display: flex;
+        flex-direction: column;
+        gap: .625rem;
+        padding: 1.25rem;
+        h3 {
+            color: map-get($primary-color, '900' );
+            font-weight: map-get($heading-fw, 'semibold' );
+            text-transform: capitalize;
+        }
+        & > div {
+            display: flex;
+            gap: 1.875rem;
+        }
+        .atencion {
+            &:not(:last-child) {
+                border-right: 1px solid rgba(map-get($white-color, '900' ), .3);
+                padding-inline-end: 1.875rem;
+            }
+            &__header {
+                display: flex;
+                justify-content: space-between;
+                span {
+                    font-size: 1.25rem;
+                }
+                p {
+                    font-size: 1rem;
+                }
+            }
+            &__content {
+                align-items: center;
+                display: flex;
+                gap: .3125rem;
+                i {
+                    font-size: 1.25rem;
+                    margin-inline-end: .3125rem;
+                }
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

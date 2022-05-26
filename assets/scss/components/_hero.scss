@@ -1,0 +1,27 @@
+.hero {
+    background-image: url(../img/hero-bg.jpeg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    &-wrapper {
+        display: flex;
+        padding: 8em 6em 5em;
+    }
+
+    &__content {
+        color: map-get($white-color, '900' );
+
+        h1 {
+            font-size: 5rem;
+            font-weight: map-get($heading-fw, 'semibold' );
+        }
+        p {
+            font-size: 1.25rem;
+        }
+    }
+    
+}

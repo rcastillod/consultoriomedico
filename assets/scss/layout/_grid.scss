@@ -1,0 +1,98 @@
+.grid {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 100vh;
+    padding: 0;
+
+    &.left {
+        background-color: map-get($white-color, '900' );
+        .bg-wrapper {
+            background-position: center center;
+            background-size: cover;
+            border-bottom-right-radius: .625rem;
+            height: 100%;
+        }
+        .content {
+            grid-column: 2;
+            padding-inline: 6.25rem;
+            #horasDental {
+                margin-bottom: 2.5rem
+            }
+            p:not(.section-description) {
+                font-size: 1.125rem;
+                font-weight: map-get($heading-fw, 'thin' );
+                &:not(:last-child) {
+                    margin-block-end: .3125rem;
+                }
+            }
+            i {
+                color: map-get($primary-color, '800' );
+                margin-right: .625rem;
+            }
+        }
+    }
+
+    &.dental {
+        .bg-wrapper {
+            background-image: url(../img/dental-bg.jpeg);
+        }
+        .content {
+            #horasDental {
+                margin-bottom: 2.5rem;
+            }
+        }
+        .section-title {
+            margin-bottom: 1.875rem;
+            &.small {
+                margin-bottom: 1.25rem;
+            }
+        }
+    }
+
+    &.pacientes {
+        background-attachment: fixed;
+        background-image: url(../img/section-bg.jpeg);
+        background-position: center center;
+        background-size: cover;
+        grid-template-columns: 30% 70%;
+        height: auto;
+        padding-block: 6.25rem;
+        .content {
+            background-image: url(../img/pacientes-bg.jpeg);
+            background-position: center bottom;
+            background-size: cover;
+            border-top-left-radius: .625rem;
+            border-bottom-left-radius: .625rem;
+            grid-column: 2;
+            padding: 5rem 3.125rem;
+
+            ul {
+                column-count: 2;
+                list-style-type: none;
+                margin-top: 3.125rem;
+                max-width: 31.25rem;
+                padding: 0;
+                li:not(:last-child) {
+                    margin-bottom: .3125rem;
+                }
+                i {
+                    color: map-get($primary-color, '800' );
+                    margin-inline-end: .625rem
+                }
+            }
+        }
+    }
+
+    &.traumatologia {
+        .bg-wrapper {
+            background-image: url(../img/dental-bg.jpeg);
+        }
+        .content {
+            .section-description {
+                margin-bottom: 1.875rem;
+            }
+        }
+    }
+
+}

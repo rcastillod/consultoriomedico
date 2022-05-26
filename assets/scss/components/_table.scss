@@ -1,0 +1,21 @@
+.table > :not(caption) > * > * {
+    border-bottom: 1px solid map-get($primary-color, '700' );
+}
+thead {
+    th {
+        color: map-get($primary-color , '900' );
+        font-weight: map-get($heading-fw, 'semibold' );
+        text-transform: capitalize;
+    }
+}
+
+tbody {
+    border-top: 2px solid map-get($primary-color, '900' );
+    tr {
+        transition: all .3s ease-in-out;
+        &:hover,
+        &:focus {
+            background-color: map-get($primary-color, '700' );
+        }
+    }
+}

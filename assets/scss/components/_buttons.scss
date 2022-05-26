@@ -1,0 +1,22 @@
+.button {
+    align-self: flex-start;
+    border: 1px solid map-get($primary-color, '900' );
+    color: map-get($primary-color, '900' );
+    font-size: map-get($sizes, 'medium' );
+    font-weight: map-get($text-fw, 'bold' );
+    padding: .5em 1.5625em;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    
+    &:hover,
+    &:focus {
+        border-color: map-get($primary-color, '700' );
+    }
+    &:focus {
+        color: map-get($primary-color, '700' );
+    }
+    
+    @include breakpoint-up(map-get($breakpoints, 'medium')) {
+        font-size: map-get($sizes, 'large' );
+    }
+}
