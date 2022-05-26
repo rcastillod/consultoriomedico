@@ -11407,6 +11407,28 @@ section .section-description {
 .hero__content p {
   font-size: 1.25rem;
 }
+.hero__search {
+  align-items: center;
+  display: flex;
+  gap: 1.25rem;
+  margin-block-end: 1.25rem;
+  margin-block-start: 1.875rem;
+}
+.hero__search div {
+  display: flex;
+  gap: 0.625rem;
+}
+.hero__search div input:focus {
+  box-shadow: none;
+}
+.hero__search div .btn {
+  border-color: #142958;
+  color: #142958;
+}
+.hero__search div .btn:hover, .hero__search div .btn:focus {
+  background-color: #142958;
+  color: #e7f6fd;
+}
 
 .resumen {
   display: flex;
@@ -11503,7 +11525,7 @@ section .section-description {
 }
 
 .table > :not(caption) > * > * {
-  border-bottom: 1px solid #e7f6fd;
+  border-bottom: 1px solid #142958;
 }
 
 thead th {

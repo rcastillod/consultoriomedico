@@ -23,5 +23,29 @@
             font-size: 1.25rem;
         }
     }
+
+    &__search {
+        align-items: center;
+        display: flex;
+        gap: 1.25rem;
+        margin-block-end: 1.25rem;
+        margin-block-start: 1.875rem;
+        div {
+            display: flex;
+            gap: .625rem;
+            input:focus {
+                box-shadow: none;
+            }
+            .btn {
+                border-color: map-get($primary-color, '900' );
+                color: map-get($primary-color, '900' );
+                &:hover,
+                &:focus {
+                    background-color: map-get($primary-color, '900' );
+                    color: map-get($primary-color, '700' );
+                }
+            }
+        }
+    }
     
 }

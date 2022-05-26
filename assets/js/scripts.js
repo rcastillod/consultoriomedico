@@ -125,6 +125,25 @@ function Consultorio(nombre, pacientes) {
     Consultorio.prototype.addPaciente = function(paciente) {
         return this._addPaciente = paciente
     }
+    // Metodo searchPaciente
+    Consultorio.prototype.searchPaciente = function(nombre) {
+        let result = ''
+        this._getPacientes.forEach(paciente => {
+
+            if ( paciente.getNombre() == nombre ) {
+                result = `
+                    <tr>
+                        <th scope="row">${paciente.getNombre()}</th>
+                        <td>${paciente.getEdad()}</td>
+                        <td>${paciente.getRut()}</td>
+                        <td>${paciente.getDiagnostico()}</td>
+                    </tr>
+                `
+            }
+        })
+        
+        return result
+    }
 
 }
 
@@ -136,8 +155,6 @@ consultorio.addPaciente(paciente4)
 consultorio.addPaciente(paciente5)
 
 let pacientes = consultorio.getPacientes()
-
-
 
 function showPacientes(id, list) {
     let pacientesWrapper = document.getElementById(id)
@@ -156,5 +173,28 @@ function showPacientes(id, list) {
 
     return pacientesWrapper
 }
-
 showPacientes('pacientes', pacientes)
+
+function searchPaciente() {
+    let pacientesWrapper = document.getElementById('pacientes')
+    let inputVal = document.getElementById('search')
+    let searchBtn = document.getElementById('searchButton')
+    
+    searchBtn.addEventListener('click', (e) => {
+        e.preventDefault()
+        if ( consultorio.searchPaciente(inputVal.value) != '' ) {
+            pacientesWrapper.innerHTML = consultorio.searchPaciente(inputVal.value)
+        } else {
+            console.log('El paciente no existe en la base de datos.')
+            pacientesWrapper.innerHTML = `
+                <tr>
+                    <th scope="row">El paciente no existe en nuestra base de datos.</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            `
+        }
+    })
+}
+searchPaciente()
